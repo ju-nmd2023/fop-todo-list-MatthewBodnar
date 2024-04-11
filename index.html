@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">My To Do List</h1>
+      <ul id="todoList" class="todo-list"></ul>
+      <button id="addItemBtn" class="add-btn">+</button>
+    </div>
+    <div id="overlay" class="overlay">
+      <div class="modal">
+        <input
+          id="taskInput"
+          class="task-input"
+          type="text"
+          placeholder="Type
+        your task here..."
+        />
+        <button id="addTaskBtn" class="add-task-btn">Add Task</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
