@@ -11,6 +11,7 @@ body, html {
   justify-content: center;
   height: 100%;
 }
+
 .title {
   font-weight: bold;
 }
@@ -43,12 +44,39 @@ body, html {
 .modal {
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .task-input {
   width: 300px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   border: 1px solid #ccc;
+}
+
+.task-controls {
+  margin-top: 10px;
+}
+
+.green-circle, .red-square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.green-circle {
+  background-color: lightgreen;
+}
+
+.red-square {
+  background-color: lightcoral;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: lightgreen;
 }
