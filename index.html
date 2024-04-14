@@ -8,23 +8,32 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="title">My To Do List</h1>
+      <h1 class="title">To Do List</h1>
+
+      <!-- unordered list for tasks -->
       <ul id="todoList" class="todo-list"></ul>
+
+      <!-- button to add new tasks -->
       <button id="addItemBtn" class="add-btn">+</button>
+
+      <!-- undo button to bring back deleted tasks -->
+      <img
+        id="undoBtn"
+        class="undo-btn"
+        src="undo.png"
+        alt="Undo"
+        style="display: none"
+      />
     </div>
 
-    <div class="task-controls">
-      <div class="green-circle" title="Mark as Done"></div>
-      <div class="red-square" title="Delete Task"></div>
-    </div>
-
+    <!-- input field inside an overlay/dialog for adding new tasks -->
     <div id="overlay" class="overlay">
-      <div class="modal">
+      <div class="dialog">
         <input
           id="taskInput"
           class="task-input"
           type="text"
-          placeholder="My new task is..."
+          placeholder="Type your task here..."
         />
       </div>
     </div>
