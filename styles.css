@@ -1,0 +1,32 @@
+body, html {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.inputbox {
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgb(155, 155, 155);
+  font-size: 16px;
+}
