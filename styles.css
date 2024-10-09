@@ -32,3 +32,28 @@ transform: translate(-50%, -50%);
   border: 1px solid rgb(155, 155, 155);
   font-size: 16px;
 }
+
+.add-button {
+  background-color: transparent;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 100%;
+  border: 1px solid rgb(155, 155, 155);
+  color: rgb(155, 155, 155);
+}
+
+#input-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-item {
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
