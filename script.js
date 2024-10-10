@@ -13,6 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
       taskItem.className = 'input-item';
       taskItem.textContent = taskText;
 
+      // delete button
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = '❌';
+      deleteButton.className = 'delete-button';
+      deleteButton.onclick = function() {
+        deleteTask(taskText, taskItem);
+      };
+
+      // append the delete button to the task item
+      taskItem.appendChild(deleteButton);
+
       // append the new task to the list container
       taskListContainer.appendChild(taskItem);
 
@@ -31,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
        tasks = []; // if no tasks were stored, empty array
        } else {
          tasks = JSON.parse(tasks); // if tasks were stored, combine them into an array
-         }
+        }
 
     tasks.push(taskText); // add the new task to the tasks array
 
@@ -46,15 +57,38 @@ document.addEventListener("DOMContentLoaded", function() {
         storedTasks = [];
         } else {
           storedTasks = JSON.parse(storedTasks);
-          }
+        }
 
     // loop through each task in the array and display it on the page
     storedTasks.forEach(function(taskText) {
     const taskItem = document.createElement('div');
     taskItem.className = 'input-item';
     taskItem.textContent = taskText;
+    
+    // create delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = '❌';
+    deleteButton.className = 'delete-button';
+    deleteButton.onclick = function() {
+      deleteTask(taskText, taskItem);
+      };
+   
+    // append the delete button to the task item
+    taskItem.appendChild(deleteButton);
     taskListContainer.appendChild(taskItem);
     });
+  }
+
+  // delete a task
+  function deleteTask(taskText, taskItem) {
+    let tasks = localStorage.getItem('tasks');
+    if (tasks !== null) {
+      tasks = JSON.parse(tasks);
+      tasks = tasks.filter(task => task !== taskText); // removal
+      localStorage.setItem('tasks', JSON.stringify(tasks)); // update local storage
+    }
+
+    taskListContainer.removeChild(taskItem); // remove task from the DOM
   }
 
   addButton.addEventListener('click', addTask);
