@@ -7,7 +7,7 @@ body, html {
 .title-container {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 .title {
@@ -16,14 +16,14 @@ body, html {
 }
 
 .input-box-container {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
 }
 
 .input-box {
-  padding: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .inputbox {
@@ -42,6 +42,8 @@ transform: translate(-50%, -50%);
   border-radius: 100%;
   border: 1px solid rgb(155, 155, 155);
   color: rgb(155, 155, 155);
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 #input-list {
